@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Roboto", "sans-serif";
     margin: 0;
@@ -73,27 +77,76 @@ header a:hover{
     color: brown;
 }
 
-#Sobremi .container{
+#sobremi .container{
     text-align: center;
     padding: 200px 12px;
 }
 
-#Cursos{
+#cursos{
     background-color: brown;
     color: beige;
     text-align: center;
 
 }
-#Cursos .container{
+#cursos .container{
     padding: 100px 0px;
 }
-#Cursos h2{
+#cursos h2{
     margin-top: 0;
 
 }
-#Cursos p{
+#cursos p{
     display: none;
 }
 
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+     header .container{
+         flex-direction: row;  
+         justify-content: space-between;
+     }
 
 
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+
+    }
+
+    #sobremi .container{
+        display: flex;
+        justify-content: center;
+
+    }
+    #sobremi .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #sobremi h2{
+        margin: 0px;
+    }
+    #sobremi .img-container{
+        background-image: url("yo.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #cursos .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
