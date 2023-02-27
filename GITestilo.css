@@ -61,3 +61,42 @@ header a:hover{
 }
 h1{font-size: 3.5em;}
 h2{font-size: 2.7em;}
+
+#QUEESGIT{
+    background-color: brown;
+    color: beige;
+    text-align: center;
+}
+#QUEESGIT .container{
+    display: flex;
+    justify-content: center;
+
+}
+#QUEESGIT .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+     header .container{
+         flex-direction: row;  
+         justify-content: space-between;
+     }
+
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+
+    }
+}
