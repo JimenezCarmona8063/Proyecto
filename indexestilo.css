@@ -136,7 +136,7 @@ header a:hover{
         margin: 0px;
     }
     #sobremi .img-container{
-        background-image: url("yo.jpg");
+        background-image: url("yo2.jfif");
         background-size: cover;
         background-position: center center;
         height: 500px;
@@ -146,8 +146,15 @@ header a:hover{
     #cursos .programas{
         display: flex;
         justify-content: center;
-        
+
     }
-
-
+       
+}
+#contacto{
+    background-color: black;
+    color: beige;
+}
+#sobremi{
+    background-color: black;
+    color: beige;
 }
