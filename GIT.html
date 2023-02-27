@@ -26,21 +26,105 @@
         <div class="texto">
 
              <h2> GIT </h2>
-             <P><div align = "center"><h3> ¿Que es GIT? </div></P>
-                <P>  Git es un sistema de control de versiones distribuido, lo que significa que un clon local 
-                     del proyecto es un repositorio de control de versiones completo. Estos
-                     repositorios locales plenamente funcionales permiten trabajar sin conexión 
-                     o de forma remota con facilidad. </P>
+             <P><div align = "center"><h3> ¿QUÉ GIT? </div></P>
+                <P> Git es un sistema libre y de código abierto distribuido de control de versiones diseñado 
+                    para manejar todo, desde pequeñas a proyectos muy grandes con rapidez y eficacia.
+                    Git es fácil de aprender y tiene una pequeña huella con un rendimiento increíblemente rápido.
+                     Se supera a herramientas de SCM como Subversion, CVS, Perforce y 
+                     ClearCase con características como barato ramificación locales, áreas de 
+                     almacenamiento convenientes, y múltiples flujos de trabajo.
+                     </P>
                 
-                <P><div align = "center"><h3> PARA QUE SIRVE </div></P>
-                    <P>poder controlar todos los cambios que se hacen en nuestra aplicación y en nuestro código y 
-                        vamos a tener control absoluto de todo lo que pasa en el código, pudiendo volver 
-                        atrás en el tiempo, pudiendo abrir diferentes ramas de desarrollo</P>
+                <P><div align = "center"><h3> HISTORIA </div></P>
+                    <P>El núcleo de Linux es un proyecto de software de código abierto con un alcance bastante grande. 
+                        Durante la mayor parte del mantenimiento del núcleo de Linux (1991-2002), los cambios en el software 
+                        se pasaron en forma de parches y archivos. En 2002, el proyecto del núcleo de Linux empezó a usar un 
+                        DVCS propietario llamado BitKeeper. En 2005, la relación entre la comunidad que desarrollaba el núcleo 
+                        de Linux y la compañía que desarrollaba BitKeeper se vino abajo, y la herramienta dejó de ser ofrecida 
+                        gratuitamente. Esto impulsó a la comunidad de desarrollo de Linux (y en particular a Linus Torvalds,
+                         el creador de Linux) a desarrollar su propia herramienta basada en algunas de las lecciones que aprendieron
+                        durante el uso de BitKeeper. Algunos de los objetivos del nuevo sistema fueron los siguientes:
+                          • Velocidad • Diseño sencillo • Fuerte apoyo al desarrollo no lineal (miles de ramas paralelas)
+                          • Completamente distribuido • Capaz de manejar grandes proyectos (como el núcleo de Linux) de manera
+                           eficiente (velocidad y tamaño de los datos) Desde su nacimiento en 2005, Git ha evolucionado y madurado
+                           para ser fácil de usar y aún conservar estas cualidades iniciales. Es tremendamente rápido, muy eficiente 
+                           con grandes proyectos, y tiene un increíble sistema de ramificación (branching) para desarrollo no lineal.</P>
 
-                <P> <div align = "center"><h3> Comandos </div> </P>
-                <P><div align = "left"> </div>Git tiene una serie de comandos los cuales nos ayudan a 
-                poder guardar, agregar, modificar cosas a nuestro repositorio, así como crear nuevas ramas
-                para este. </P>
+                <P> <div align = "center"><h3> INSTALACION </div> </P>
+                <P><div align = "left"> </div>GCada versión de Git tiende a incluir útiles mejoras en la interfaz de usuario, por lo que 
+                        utilizar la última versión es a menudo el camino más adecuado si te sientes cómodo compilando software desde código fuente. 
+                        También ocurre que muchas distribuciones de Linux contienen paquetes muy antiguos; así que a menos que estés en una 
+                        distribución muy actualizada o estés usando backports, instalar desde código fuente puede ser la mejor opción. 
+                        Para instalar Git, necesitas tener las siguientes librerías de las que Git depende: curl, zlib, openssl, expat y libiconv.
+                        Por ejemplo, si estás en un sistema que tiene yum (como Fedora) o apt-get (como un sistema basado en Debian), puedes usar
+                        estos comandos para instalar todas las dependencias:
+                         $ yum install curl-devel expat-devel gettext-devel \
+
+                        openssl-devel zlib-devel
+                        $ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \ 
+                        libz-dev libssl-dev
+                        Luego compila e instala: $ tar -zxf git-1.6.0.5.tar.gz $ cd git-1.6.0.5 
+                        $ make prefix=/usr/local all $ sudo make prefix=/usr/local install
+                        Una vez hecho esto, también puedes obtener Git, a través del propio Git,
+                        para futuras actualizaciones: $ git clone git://git.kernel.org/pub/scm/git/git.git
+                    </P>
+                
+                <P> <div align = "center"><h3> COMANDOS </div> </P>
+                    <P>
+                        <h3>git init</h3>
+                        <br> El comando git init crea un nuevo repositorio de Git. Puede utilizarse para convertir un proyecto
+                         existente y sin versión en un repositorio de Git, o para inicializar un nuevo repositorio vacío.
+                    </P>
+                    <P>
+                        <h3>git clone</h3>
+                        <br>creará un nuevo directorio local para el repositorio, copiará todo el contenido del repositorio 
+                        especificado, creará las sucursales remotas rastreadas y extraerá una sucursal inicial localmente. 
+                        De forma predeterminada, el clon de Git creará una referencia al repositorio remoto llamado  origin.
+                    </P>
+                    <P>
+                        <h3>git commit</h3>
+                        <br>  La expresión de software tradicional de "saving" es sinónimo del término de Git "committing|".
+                         Una confirmación es el equivalente Git de un "saving". El guardado tradicional debe considerarse como
+                         una operación del sistema de archivos que se utiliza para sobrescribir un archivo existente o escribir un 
+                         archivo nuevo.
+                    </P>
+                    <h3>git add</h3>
+                        <br>El git addcomando agrega un cambio en el directorio de trabajo al área de ensayo. Le dice a Git que desea
+                         incluir actualizaciones de un archivo en particular en la próxima confirmación. Sin embargo,
+                         git add en realidad no afecta al repositorio de manera significativa: los cambios no se registran hasta que 
+                         ejecuta git commit.
+                    </P>
+                    <P>
+                    <h3>git config</h3>
+                         <br> Un uso es invocarlo con un nombre de configuración, que mostrará el valor establecido en ese nombre.
+                         Los nombres de configuración son cadenas delimitadas por puntos compuestas por una 'sección' y 
+                         una 'clave' según su jerarquía. Por ejemplo:user.email
+                        </P>
+                    </P>
+                    <P>
+                        <h3>git status</h3>
+                            <br> Muestra las rutas que tienen diferencias entre el archivo de índice y la confirmación HEAD actual,
+                            las rutas que tienen diferencias entre el árbol de trabajo y el archivo de índice, y las rutas en el árbol
+                            de trabajo que no son rastreadas por Git (y no son ignoradas por gitignore[5 ] ). Los primeros son lo que
+                            cometería al ejecutar git commit; el segundo y el tercero son lo que podría confirmar ejecutando git add
+                            antes de ejecutar git commit.
+                            </P>
+                    </P>
+                    <P>
+                        <h3>git push</h3>
+                            <br> te permite subir los commits desde tu rama (branch) local en tu repositorio
+                             git local al repositorio remoto.
+                            </P>
+                    </P>
+                    <P>
+                        <h3>git checkout</h3>
+                            <br> El git checkoutcomando le permite navegar entre las ramas creadas por git branch. Revisar una rama 
+                            actualiza los archivos en el directorio de trabajo para que coincidan con la versión almacenada en esa rama,
+                            y ​​le dice a Git que registre todas las confirmaciones nuevas en esa rama.
+                            </P>
+                    </P>
+
+                    
 
 
         </div>
